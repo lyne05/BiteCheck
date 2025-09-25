@@ -1,32 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/detailFragment">
+    app:startDestination="@id/nav_dashboard">
 
+    <!-- Dashboard -->
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.bitecheck.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.bitecheck.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <!-- Account -->
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.example.bitecheck.ListFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
-        <action
-            android:id="@+id/action_listFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
-    </fragment>
+        android:id="@+id/nav_account"
+        android:name="com.example.bitecheck.ui.account.AccountFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_account" />
+
+    <!-- Reminders -->
     <fragment
-        android:id="@+id/favoritesFragment"
-        android:name="com.example.bitecheck.FavoritesFragment"
-        android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        android:id="@+id/nav_reminders"
+        android:name="com.example.bitecheck.ui.reminders.RemindersFragment"
+        android:label="@string/menu_reminders"
+        tools:layout="@layout/fragment_reminders" />
+
+    <!-- Reports & Insights -->
     <fragment
-        android:id="@+id/cafeFragment"
-        android:name="com.example.bitecheck.CafeFragment"
-        android:label="fragment_cafe"
-        tools:layout="@layout/fragment_cafe" />
+        android:id="@+id/nav_reports"
+        android:name="com.example.bitecheck.ui.reports.ReportsFragment"
+        android:label="@string/menu_reports"
+        tools:layout="@layout/fragment_reports" />
+
+    <!-- Feedback & Support -->
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.bitecheck.ui.feedback.FeedbackFragment"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment_feedback" />
+
+    <!-- Settings -->
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.bitecheck.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <!-- Logout  -->
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.bitecheck.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <!-- Daily Goals  -->
+    <fragment
+        android:id="@+id/nav_daily_goals"
+        android:name="com.example.bitecheck.ui.daily.DailyGoalsFragment"
+        android:label="Daily Goals"
+        tools:layout="@layout/fragment_daily_goals" />
+
+    <!-- Weight Tracker  -->
+    <fragment
+        android:id="@+id/nav_weight_tracker"
+        android:name="com.example.bitecheck.ui.weight.WeightTrackerFragment"
+        android:label="Weight Tracker"
+        tools:layout="@layout/fragment_weight_tracker" />
+
+    <!-- Water Tracker  -->
+    <fragment
+        android:id="@+id/nav_water_tracker"
+        android:name="com.example.bitecheck.ui.water.WaterTrackerFragment"
+        android:label="Water Tracker"
+        tools:layout="@layout/fragment_water_tracker" />
+
+    <!-- AI Chat  -->
+    <fragment
+        android:id="@+id/nav_ai_chat"
+        android:name="com.example.bitecheck.ui.chat.AIChatFragment"
+        android:label="AI Chat"
+        tools:layout="@layout/fragment_ai_chat" />
+
+
 </navigation>
